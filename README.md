@@ -18,12 +18,12 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
         * ```save_imgs(self, epoch, gen_imgs, y_points)```: Save the model and generate prediction samples for a given epoch at the user specified path, ```model_path```. Each sample contains 8 generated predictions and 8 training samples. If the batch size is less than 8 then this function needs to be modified.
     
     * ### User Specified Parameters:
-        * ```data_path```: Folder containing dataset.
-        * ```model_path```: Folder where you want to save to model as well as generated samples.
+        * ```data_path```: File path pointing to folder containing dataset.
+        * ```model_path```: File path pointing to folder where you want to save to model as well as generated samples.
         * ```interval```: How many epochs between saving your model.
         * ```epochs```: How many epochs to train the model.
         * ```batch```: How many images to train at one time. If batch size is less than 8, alter the save_img function to plot less images. Ideally this number would be a factor of the size of your dataset.
-        * ```conv_filters```: How many convolutional filters for each convolutional layer of the generator and the discrminator.
+        * ```conv_filters```: How many convolutional filters for each convolutional layer of the Generator and the Discrminator.
         * ```kernel```: Size of kernel used in the convolutional layers.
         * ```png```: Boolean flag, set to True if the data has PNGs to remove alpha layer from images.
     
@@ -33,8 +33,8 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
     * The interpolation of points can be used to make GIFs of walking through the latent space of the Generator model input such as the GIF in this README.
     
     * ### User Specified Parameters:
-        * ```data_path```: Folder containing dataset.
-        * ```model_path```: Folder where you want to save to model as well as generated samples.
-        * ```save_path```: Folder where you want to save generated predictions of the trained model.
+        * ```data_path```: File path pointing to folder containing dataset.
+        * ```model_path```: File path pointing to folder where you want to save to model as well as generated samples.
+        * ```save_path```: File path pointing to folder where you want to save generated predictions of the trained model.
         * ```png```: Boolean flag, set to True if the data has PNGs to remove alpha layer from images.
         
