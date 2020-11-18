@@ -9,6 +9,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
   * Keras (I use 2.3.1)
   * Tensorflow (I use 1.14.0)
   * Sklearn
+  * Scipy
   * Numpy
   * Matplotlib
   * PIL
