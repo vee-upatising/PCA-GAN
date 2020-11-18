@@ -13,7 +13,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
   * Matplotlib
   * PIL
 * ## Documentation
-  * ## PCA GAN Training.ipynb
+  * ## PCA GAN Training
     * This notebook is used to define the DCGAN class, train the Generative Adversarial Network, generate samples, and save the model at every epoch interval.
     * The Generator and Discriminator models were designed to be trained on an 8 GB GPU. If you have a less powerful GPU then decrease the conv_filter and kernel parameters accordingly.
     
@@ -35,7 +35,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
         * ```kernel```: Size of kernel used in the convolutional layers.
         * ```png```: Boolean flag, set to True if the data has PNGs to remove alpha layer from images.
     
-  * ## PCA GAN Inference.ipynb
+  * ## PCA GAN Inference
     * This notebook is used to perform inference on Generator models trained by the ```PCA GAN Training``` script and interpolate points in the latent space of the Generator model input.
     * The pretrained model provided, ```model.h5```, can be used with this notebook.
     * The interpolation of points can be used to make GIFs of walking through the latent space of the Generator model input such as the GIF in this README.
