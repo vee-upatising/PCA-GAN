@@ -4,7 +4,15 @@
 Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Analysis) to Generate Cats.
 
 # How To Use This Repository
-* ## Jupyter Notebook
+* ## Requirements
+  * Python 3
+  * Keras (I use 2.3.1)
+  * Tensorflow (I use 1.14.0)
+  * Sklearn
+  * Numpy
+  * Matplotlib
+  * PIL
+* ## Documentation
   * ## PCA GAN Training.ipynb
     * This notebook is used to define the DCGAN class, train the Generative Adversarial Network, generate samples, and save the model at every epoch interval.
     * The Generator and Discriminator models were designed to be trained on an 8 GB GPU. If you have a less powerful GPU then decrease the conv_filter and kernel parameters accordingly.
