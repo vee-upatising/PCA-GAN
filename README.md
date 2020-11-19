@@ -13,6 +13,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
   * Numpy
   * Matplotlib
   * PIL
+  * [Keract](https://github.com/philipperemy/keract) (for Model Visualization)
 * ## Dataset
   * [Download from Kaggle](https://www.kaggle.com/spandan2/cats-faces-64x64-for-generative-models)
 * ## Documentation
