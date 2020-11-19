@@ -22,9 +22,9 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
     
     * ### DCGAN Class:
         * ```__init__(self)```: The class is initialized by defining the dimensions of the input vector as well as the output image. The Generator and Discriminator models get initialized using ```build_generator()``` and ```build_discriminator()```.
-        * ```build_generator(self)```: Define Generator model. There are 5 convolutional filters, upsampling from ```8x8x8``` to ```64x64x3```. Gets called when DCGAN class is initialized.
-        * ```build_discriminator(self)```: Define Discriminator model. There are 5 convolutional filters, downsampling from ```64x64x3``` to ```1``` scalar prediction. Gets called when DCGAN class is initialized.
-        * ```load_data(self)```: Load data from user specified file path, ```data_path```. Use PCA to project image dataset onto a lower dimension as X_Train dataset. Process image dataset and reshape to 4 dimensions for Y_Train dataset. Gets called in the ```train()``` method.
+        * ```build_generator(self)```: Define Generator model. There are 5 convolutional filters, upsampling from ```8x8x8``` to ```64x64x3```. Gets called when the DCGAN class is initialized.
+        * ```build_discriminator(self)```: Define Discriminator model. There are 5 convolutional filters, downsampling from ```64x64x3``` to ```1``` scalar prediction. Gets called when the DCGAN class is initialized.
+        * ```load_data(self)```: Load data from user specified file path, ```data_path```. Use PCA to project the image dataset onto a lower dimension as X_Train dataset. Process image dataset and reshape to 4 dimensions for Y_Train dataset. Gets called in the ```train()``` method.
         * ```train(self, epochs, batch_size, save_interval)```: Train the Generative Adversarial Network. Each epoch trains the model using the entire dataset split up into chunks defined by ```batch_size```. If epoch is at ```save_interval```, call ```save_imgs()``` to generate samples and save model of current epoch.
         * ```save_imgs(self, epoch, gen_imgs, y_points)```: Save the model and generate prediction samples for a given epoch at the user specified path, ```model_path```. Each sample contains 8 generated predictions and 8 training samples. If the batch size is less than 8 then this function needs to be modified.
     
