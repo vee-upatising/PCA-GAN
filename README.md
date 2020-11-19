@@ -48,4 +48,6 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
         * ```model_path```: File path pointing to folder where you want to save to model as well as generated samples.
         * ```save_path```: File path pointing to folder where you want to save generated predictions of the trained model.
         * ```png```: Boolean flag, set to True if the data has PNGs to remove alpha layer from images.
-        
+ 
+* ## Generated Training Sample
+![training](https://i.imgur.com/qfXMsYm.jpg)
