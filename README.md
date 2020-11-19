@@ -13,9 +13,11 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
   * Numpy
   * Matplotlib
   * PIL
+* ## Dataset
+  * [Download from Kaggle](https://www.kaggle.com/spandan2/cats-faces-64x64-for-generative-models)
 * ## Documentation
   * ## PCA GAN Training
-    * This notebook is used to define the DCGAN class, train the Generative Adversarial Network, generate samples, and save the model at every epoch interval.
+    * This script is used to define the DCGAN class, train the Generative Adversarial Network, generate samples, and save the model at every epoch interval.
     * The Generator and Discriminator models were designed to be trained on an 8 GB GPU. If you have a less powerful GPU then decrease the conv_filter and kernel parameters accordingly.
     
     * ### DCGAN Class:
@@ -37,7 +39,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
         * ```png```: Boolean flag, set to True if the data has PNGs to remove alpha layer from images.
     
   * ## PCA GAN Inference
-    * This notebook is used to perform inference on Generator models trained by the ```PCA GAN Training``` script and interpolate points in the latent space of the Generator model input.
+    * This script is used to perform inference on Generator models trained by the ```PCA GAN Training``` script and interpolate points in the latent space of the Generator model input.
     * The pretrained model provided, ```model.h5```, can be used with this notebook.
     * The interpolation of points can be used to make GIFs of walking through the latent space of the Generator model input such as the GIF in this README.
     
