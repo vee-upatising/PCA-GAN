@@ -156,7 +156,7 @@ class DCGAN():
         model.add(LeakyReLU(alpha=0.2))
         
         # 5th Convolutional Layer (Output Layer)
-        model.add(Conv2D(3, kernel_size=(5,5), padding="same"))
+        model.add(Conv2D(3, kernel_size=kernel, padding="same"))
         model.add(LeakyReLU(alpha=0.2))
         model.summary()
 
@@ -171,31 +171,31 @@ class DCGAN():
         model = Sequential()
 
         # Input Layer
-        model.add(Conv2D(conv_filters, kernel_size=(5,5), input_shape=self.img_shape,activation = "relu", padding="same"))
+        model.add(Conv2D(conv_filters, kernel_size=kernel, input_shape=self.img_shape,activation = "relu", padding="same"))
         
         # Downsample the data (64x64 to 32x32)
         model.add(MaxPooling2D(pool_size=(2, 2)))
         
         # 1st Convolutional Layer
-        model.add(Conv2D(conv_filters, kernel_size=(5,5), activation='relu', padding="same"))
+        model.add(Conv2D(conv_filters, kernel_size=kernel, activation='relu', padding="same"))
         
         # Downsample the data (32x32 to 16x16)
         model.add(MaxPooling2D(pool_size=(2, 2)))
         
         # 2nd Convolutional Layer
-        model.add(Conv2D(conv_filters, kernel_size=(5,5), activation='relu', padding="same"))
+        model.add(Conv2D(conv_filters, kernel_size=kernel, activation='relu', padding="same"))
         
         # Downsample the data (16x16 to 8x8)
         model.add(MaxPooling2D(pool_size=(2, 2)))
         
         # 3rd Convolutional Layer
-        model.add(Conv2D(conv_filters, kernel_size=(5,5), activation='relu', padding="same"))
+        model.add(Conv2D(conv_filters, kernel_size=kernel, activation='relu', padding="same"))
         
         # 4th Convolutional Layer
-        model.add(Conv2D(conv_filters, kernel_size=(5,5), activation='relu', padding="same"))
+        model.add(Conv2D(conv_filters, kernel_size=kernel, activation='relu', padding="same"))
         
         # 5th Convolutional Layer
-        model.add(Conv2D(conv_filters, kernel_size=(5,5), activation='relu', padding="same"))
+        model.add(Conv2D(conv_filters, kernel_size=kernel, activation='relu', padding="same"))
         
         model.add(Flatten())
         
