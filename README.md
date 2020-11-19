@@ -51,3 +51,11 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
  
 * ## Generated Training Sample
 ![training](https://i.imgur.com/qfXMsYm.jpg)
+
+* ## Generator Model Architecture
+  * Using (5,5) Convolutional Kernels </br>
+![Generator](https://i.imgur.com/toVb4MD.png)
+
+* ## Discriminator Model Architecture
+  * Using (5,5) Convolutional Kernels </br>
+![Discriminator](https://i.imgur.com/MkgHCUt.png)
