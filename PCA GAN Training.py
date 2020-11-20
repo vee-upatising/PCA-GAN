@@ -22,7 +22,7 @@ model_path = r"C:\Users\Vee\Desktop\python\GAN\pca_new"
 interval = 5
 
 # How many epochs to run the model
-epoch = 1001
+epoch = 250
 
 # How many images to train at one time. If batch size is less than 8, alter the save_img function to plot less images
 # Ideally this number would be a factor of the size of your dataset
@@ -227,7 +227,7 @@ class DCGAN():
         d_loss_epochs = np.zeros((epochs, 1))
         
         # Training the GAN
-        for epoch in range(epochs):
+        for epoch in range(1, epochs + 1):
             
             # Initialize indexes for training data
             start = 0
