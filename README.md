@@ -31,6 +31,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
     
     * ### User Specified Parameters:
         * ```data_path```: File path pointing to folder containing dataset.
+        * ```img_dimensions```: Tuple representing the dimensions of the images inside the dataset.
         * ```model_path```: File path pointing to folder where you want to save to model as well as generated samples.
         * ```interval```: How many epochs between saving your model.
         * ```epochs```: How many epochs to train the model.
@@ -46,6 +47,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
     
     * ### User Specified Parameters:
         * ```data_path```: File path pointing to folder containing dataset.
+        * ```img_dimensions```: Tuple representing the dimensions of the images inside the dataset.
         * ```model_path```: File path pointing to folder where you want to save to model as well as generated samples.
         * ```save_path```: File path pointing to folder where you want to save generated predictions of the trained model.
         * ```png```: Boolean flag, set to True if the data has PNGs to remove alpha layer from images.
