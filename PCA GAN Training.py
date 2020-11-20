@@ -1,4 +1,4 @@
-from keras.layers import Input, Dense, Reshape, Flatten, Activation
+from keras.layers import Input, Dense, Reshape, Flatten
 from keras.layers.advanced_activations import LeakyReLU
 from keras.layers.convolutional import UpSampling2D, Conv2D, MaxPooling2D
 from keras.models import Sequential, Model
@@ -14,6 +14,9 @@ from PIL import Image
 
 # Folder containing dataset
 data_path = r'D:\Downloads\cats-faces-64x64-for-generative-models\cats'
+
+# Dimensions of the images inside the dataset
+img_dimensions = (64,64,3)
 
 # Folder where you want to save to model as well as generated samples
 model_path = r"C:\Users\Vee\Desktop\python\GAN\pca_new"
@@ -45,9 +48,9 @@ class DCGAN():
     def __init__(self):
         
         # Set dimensions of the output image
-        self.img_rows = 64
-        self.img_cols = 64
-        self.channels = 3
+        self.img_rows = img_dimensions[0]
+        self.img_cols = img_dimensions[1]
+        self.channels = img_dimensions[2]
         self.img_shape = (self.img_rows, self.img_cols, self.channels)
         
         # Set dimensions of the input noise

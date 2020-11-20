@@ -17,6 +17,9 @@ from sklearn.decomposition import PCA
 # Folder containing dataset
 data_path = r"D:\Downloads\cats-faces-64x64-for-generative-models\cats"
 
+# Dimensions of the images inside the dataset
+img_dimensions = (64,64,3)
+
 # File path to trained model from PCA GAN Training script
 model_path = "model.h5"
 
@@ -45,7 +48,8 @@ for r, d, f in os.walk(data_path):
 
 # For each file add it to the data array
 for path in paths:
-    img = np.array(Image.open(path))
+    img = Image.open(path)
+    img = np.array(img.resize((img_dimensions[0], img_dimensions[1])))
 
     # Remove alpha layer if imgaes are PNG
     if(png):
@@ -54,7 +58,7 @@ for path in paths:
     data.append(img)
 
 #Reshaping data to be two dimensional for Principal Component Analysis
-img_vector = np.array(data).reshape(len(data), 12288)/255
+img_vector = np.array(data).reshape(len(data), img_dimensions[0] * img_dimensions[1] * img_dimensions[2])/255
 
 #Keep the first 512 eigenvectors of the covariance matrix of the img_vector
 pca = PCA(n_components=512).fit(img_vector)
@@ -71,7 +75,7 @@ imshow(x.reshape(32,16))
 ######################################################################## Generate Prediction From Random Element Of X_Train Dataset ########################################################################
 
 result = np.array(model.predict(x))
-result = result.reshape(1,64,64,3)
+result = result.reshape(1,img_dimensions[0],img_dimensions[1],img_dimensions[2])
 result = result*255
 result = result.astype(int)
 imshow(result[0])
