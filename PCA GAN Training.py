@@ -96,8 +96,8 @@ class DCGAN():
 
         # For each file add it to the data array
         for path in paths:
-            img = np.array(Image.open(path))
-            
+            img = Image.open(path)
+            img = np.array(img.resize((self.img_rows, self.img_cols)))
             # Remove alpha layer if imgaes are PNG
             if(png):
                 img = img[...,:3]
@@ -105,7 +105,7 @@ class DCGAN():
             data.append(img)
         
         #Reshaping data to be two dimensional for Principal Component Analysis
-        img_vector = np.array(data).reshape(len(data), 12288)/255
+        img_vector = np.array(data).reshape(len(data), self.img_rows * self.img_cols * self.channels)/255
         
         #Keep the first 512 eigenvectors of the covariance matrix of the img_vector
         pca = PCA(n_components=512).fit(img_vector)
@@ -114,7 +114,7 @@ class DCGAN():
         # Return x_train reshaped to two dimensions and Y_train reshaped to 4 dimensions
         x_train = pca_data.reshape(len(pca_data), 512)
         y_train = np.array(data)
-        y_train = y_train.reshape(len(data),64,64,3)
+        y_train = y_train.reshape(len(data), self.img_rows, self.img_cols, self.channels)
         
         # Shuffle indexes of data
         X_shuffle, Y_shuffle = shuffle(x_train, y_train)
@@ -278,10 +278,10 @@ class DCGAN():
             loss_data = [np.average(discriminator_loss_real),np.average(discriminator_loss_fake),np.average(generator_loss)]
             
             #save loss history
-            g_loss_epochs[epoch] = loss_data[2]
+            g_loss_epochs[epoch - 1] = loss_data[2]
             
             # Average loss of real data classification and fake data accuracy
-            d_loss_epochs[epoch] = (loss_data[0] + (1 - loss_data[1])) / 2
+            d_loss_epochs[epoch - 1] = (loss_data[0] + (1 - loss_data[1])) / 2
                 
             # Print average loss over current epoch
             print ("%d [D loss: %f, acc.: %.2f%%] [G loss: %f]" % (epoch, loss_data[0], loss_data[1]*100, loss_data[2]))
