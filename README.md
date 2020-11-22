@@ -33,11 +33,11 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
         * ```data_path```: File path pointing to folder containing dataset.
         * ```img_dimensions```: Tuple representing the dimensions of the images inside the dataset.
         * ```model_path```: File path pointing to folder where you want to save to model as well as generated samples.
-        * ```interval```: How many epochs between saving your model.
-        * ```epochs```: How many epochs to train the model.
-        * ```batch```: How many images to train at one time. If batch size is less than 8, alter the save_img function to plot less images. Ideally this number would be a factor of the size of your dataset.
-        * ```conv_filters```: How many convolutional filters for each convolutional layer of the Generator and the Discrminator.
-        * ```kernel```: Size of kernel used in the convolutional layers.
+        * ```interval```: Integer representing how many epochs between saving your model.
+        * ```epochs```: Integer representing how many epochs to train the model.
+        * ```batch```: Integer representing how many images to train at one time. If batch size is less than 8, alter the save_img function to plot less images. Ideally this number would be a factor of the size of your dataset.
+        * ```conv_filters```: Integer representing how many convolutional filters for each convolutional layer of the Generator and the Discrminator.
+        * ```kernel```: Tuple representing the size of the kernels used in the convolutional layers.
         * ```png```: Boolean flag, set to True if the data has PNGs to remove alpha layer from images.
     
   * ## PCA GAN Inference
