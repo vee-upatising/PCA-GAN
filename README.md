@@ -8,8 +8,8 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
 # How To Use This Repository
 * ## Requirements
   * Python 3
-  * Keras (I use 2.3.1)
-  * Tensorflow (I use 1.14.0)
+  * Keras (I use ```2.3.1```)
+  * Tensorflow (I use ```1.14.0```)
   * Sklearn
   * Scipy
   * Numpy
