@@ -64,7 +64,10 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
         * ```png```: Boolean flag, set to True if the data has PNGs to remove alpha layer from images.
  
 * ## Generated Training Sample
-![training](https://i.imgur.com/qfXMsYm.jpg)
+![Training](https://i.imgur.com/qfXMsYm.jpg)
+
+* ## Model Visualization
+![Keract](https://thumbs.gfycat.com/HarmoniousCrazyIchidna-mobile.mp4)
 
 * ## Generator Model Architecture
   * Using (5,5) Convolutional Kernels </br>
