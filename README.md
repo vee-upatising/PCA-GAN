@@ -27,7 +27,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
         * ```__init__(self)```: The class is initialized by defining the dimensions of the input vector as well as the output image. The Generator and Discriminator models get initialized using ```build_generator()``` and ```build_discriminator()```.
         * ```build_generator(self)```: Defines Generator model. There are 5 convolutional layers, upsampling from ```8x8x8``` to ```64x64x3```. Gets called when the DCGAN class is initialized.
         * ```build_discriminator(self)```: Defines Discriminator model. There are 5 convolutional layers, downsampling from ```64x64x3``` to ```1``` scalar prediction. Gets called when the DCGAN class is initialized.
-        * ```load_data(self)```: Load data from user specified file path, ```data_path```. Uses PCA to project the image dataset onto a lower dimension as X_Train dataset. Processes image dataset and reshape to 4 dimensions for Y_Train dataset. Gets called in the ```train()``` method.
+        * ```load_data(self)```: Loads data from user specified file path, ```data_path```. Uses PCA to project the image dataset onto a lower dimension as X_Train dataset. Processes image dataset and reshape to 4 dimensions for Y_Train dataset. Gets called in the ```train()``` method.
         * ```train(self, epochs, batch_size, save_interval)```: Trains the Generative Adversarial Network. Each epoch trains the model using the entire dataset split up into chunks defined by ```batch_size```. If epoch is at ```save_interval```, call ```save_imgs()``` to generate samples and save model of current epoch.
         * ```save_imgs(self, epoch, gen_imgs, y_points)```: Saves the model and generate prediction samples for a given epoch at the user specified path, ```model_path```. Each sample contains 8 generated predictions and 8 training samples. If the batch size is less than 8 then this function needs to be modified.
     
@@ -38,7 +38,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
         * ```interval```: Integer representing how many epochs between saving your model.
         * ```epochs```: Integer representing how many epochs to train the model.
         * ```batch```: Integer representing how many images to train at one time. If batch size is less than 8, alter the save_img function to plot less images. Ideally this number would be a factor of the size of your dataset.
-        * ```conv_filters```: Integer representing how many convolutional filters for each convolutional layer of the Generator and the Discrminator.
+        * ```conv_filters```: Integer representing how many convolutional filters are used in each convolutional layer of the Generator and the Discrminator.
         * ```kernel```: Tuple representing the size of the kernels used in the convolutional layers.
         * ```png```: Boolean flag, set to True if the data has PNGs to remove alpha layer from images.
     
