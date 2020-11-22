@@ -51,6 +51,17 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
         * ```model_path```: File path pointing to folder where you want to save to model as well as generated samples.
         * ```save_path```: File path pointing to folder where you want to save generated predictions of the trained model.
         * ```png```: Boolean flag, set to True if the data has PNGs to remove alpha layer from images.
+        
+  * ## Model Visualization
+    * This script is used to visualize the convolutional filters inside the Generator models trained by the ```PCA GAN Training``` script.
+    * The pretrained model provided, ```model.h5```, can be used with this notebook.
+    * This script uses the [Keract](https://github.com/philipperemy/keract) library to visualize what is happening at each convolutional filter when performing inference on a model.
+    
+    * ### User Specified Parameters:
+        * ```data_path```: File path pointing to folder containing dataset.
+        * ```img_dimensions```: Tuple representing the dimensions of the images inside the dataset.
+        * ```model_path```: File path pointing to folder where you want to save to model as well as generated samples.
+        * ```png```: Boolean flag, set to True if the data has PNGs to remove alpha layer from images.
  
 * ## Generated Training Sample
 ![training](https://i.imgur.com/qfXMsYm.jpg)
