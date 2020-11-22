@@ -1,5 +1,5 @@
 # Principal Component Analysis - Generative Adversarial Network
-![walk](https://thumbs.gfycat.com/OffbeatImpracticalCirriped-size_restricted.gif)
+![Walk](https://s8.gifyu.com/images/ezgif.com-gif-maker-2ff7abcf99c451f3f.gif)
 </br>
 Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Analysis) to Generate Cats.
 
@@ -67,7 +67,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
 ![Training](https://i.imgur.com/qfXMsYm.jpg)
 
 * ## Model Visualization
-![Keract](https://thumbs.gfycat.com/HarmoniousCrazyIchidna-mobile.mp4)
+![Keract](https://s8.gifyu.com/images/Keract.gif)
 
 * ## Generator Model Architecture
   * Using (5,5) Convolutional Kernels </br>
