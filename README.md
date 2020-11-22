@@ -19,7 +19,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
 * ## Dataset
   * [Download from Kaggle](https://www.kaggle.com/spandan2/cats-faces-64x64-for-generative-models)
 * ## Documentation
-  * ## PCA GAN Training
+  * ## [PCA GAN Training](https://nbviewer.jupyter.org/github/vee-upatising/PCA-GAN/blob/main/PCA%20GAN%20Training.ipynb)
     * This script is used to define the DCGAN class, train the Generative Adversarial Network, generate samples, and save the model at every epoch interval.
     * The Generator and Discriminator models were designed to be trained on an 8 GB GPU. If you have a less powerful GPU then decrease the conv_filter and kernel parameters accordingly.
     
@@ -42,7 +42,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
         * ```train(self, epochs, batch_size, save_interval)```: Trains the Generative Adversarial Network. Each epoch trains the model using the entire dataset split up into chunks defined by ```batch_size```. If epoch is at ```save_interval```, then the method calls ```save_imgs()``` to generate samples and saves the model of the current epoch.
         * ```save_imgs(self, epoch, gen_imgs, y_points)```: Saves the model and generates prediction samples for a given epoch at the user specified path, ```model_path```. Each sample contains 8 generated predictions and 8 training samples. If the batch size is less than 8 then this function needs to be modified.
     
-  * ## PCA GAN Inference
+  * ## [PCA GAN Inference](https://nbviewer.jupyter.org/github/vee-upatising/PCA-GAN/blob/main/PCA%20GAN%20Inference.ipynb)
     * This script is used to perform inference on Generator models trained by the ```PCA GAN Training``` script and interpolate points in the latent space of the Generator model input.
     * The pretrained model provided, ```model.h5```, can be used with this notebook.
     * The interpolation of points can be used to make GIFs of walking through the latent space of the Generator model input such as the GIF in this README.
@@ -54,7 +54,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
         * ```save_path```: File path pointing to folder where you want to save generated predictions of the trained model.
         * ```png```: Boolean flag, set to True if the data has PNGs to remove alpha layer from images.
         
-  * ## Model Visualization
+  * ## [Model Visualization](https://nbviewer.jupyter.org/github/vee-upatising/PCA-GAN/blob/main/Model%20Visualization.ipynb)
     * This script is used to visualize the convolutional filters inside the Generator models trained by the ```PCA GAN Training``` script.
     * The pretrained model provided, ```model.h5```, can be used with this notebook.
     * This script uses the [Keract](https://github.com/philipperemy/keract) library to visualize what is happening at each convolutional filter when performing inference on a model.
