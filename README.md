@@ -29,7 +29,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
         * ```model_path```: File path pointing to folder where you want to save to model as well as generated samples.
         * ```interval```: Integer representing how many epochs between saving your model.
         * ```epochs```: Integer representing how many epochs to train the model.
-        * ```batch```: Integer representing how many images to train at one time. If batch size is less than 8, alter the save_img function to plot less images. Ideally this number would be a factor of the size of your dataset.
+        * ```batch```: Integer representing how many images to train at one time.
         * ```conv_filters```: Integer representing how many convolutional filters are used in each convolutional layer of the Generator and the Discrminator.
         * ```kernel```: Tuple representing the size of the kernels used in the convolutional layers.
         * ```png```: Boolean flag, set to True if the data has PNGs to remove alpha layer from images.
@@ -40,7 +40,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
         * ```build_discriminator(self)```: Defines Discriminator model. There are 5 convolutional layers, downsampling from ```64x64x3``` to ```1``` scalar prediction. Gets called when the DCGAN class is initialized.
         * ```load_data(self)```: Loads data from user specified file path, ```data_path```. Uses PCA to project the image dataset onto a lower dimension as X_Train dataset. Processes image dataset and reshape to 4 dimensions for Y_Train dataset. Gets called in the ```train()``` method.
         * ```train(self, epochs, batch_size, save_interval)```: Trains the Generative Adversarial Network. Each epoch trains the model using the entire dataset split up into chunks defined by ```batch_size```. If epoch is at ```save_interval```, then the method calls ```save_imgs()``` to generate samples and saves the model of the current epoch.
-        * ```save_imgs(self, epoch, gen_imgs, y_points)```: Saves the model and generates prediction samples for a given epoch at the user specified path, ```model_path```. Each sample contains 8 generated predictions and 8 training samples. If the batch size is less than 8 then this function needs to be modified.
+        * ```save_imgs(self, epoch, gen_imgs, y_points)```: Saves the model and generates prediction samples for a given epoch at the user specified path, ```model_path```. Each sample contains 8 generated predictions and 8 training samples.
     
   * ## [PCA GAN Inference](https://nbviewer.jupyter.org/github/vee-upatising/PCA-GAN/blob/main/PCA%20GAN%20Inference.ipynb)
     * This script is used to perform inference on Generator models trained by the ```PCA GAN Training``` script and interpolate points in the latent space of the Generator model input.
