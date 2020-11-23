@@ -27,7 +27,7 @@ interval = 5
 # How many epochs to run the model
 epoch = 250
 
-# How many images to train at one time. If batch size is less than 8, alter the save_img function to plot less images
+# How many images to train at one time
 # Ideally this number would be a factor of the size of your dataset
 batch = 181
 
@@ -214,6 +214,13 @@ class DCGAN():
     
     # Train the Generative Adversarial Network
     def train(self, epochs, batch_size, save_interval):
+        
+        # Prevent script from crashing from bad user input
+        if(epochs <= 0):
+            epochs = 1
+        
+        if(batch_size <= 0):
+            batch_size = 1
 
         # Load the dataset
         X_train, Y_train = self.load_data()
