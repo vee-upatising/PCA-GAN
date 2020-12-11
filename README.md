@@ -6,6 +6,7 @@
 Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Analysis) to Generate Cats.
 
 # How To Use This Repository
+* ## [Tutorial](https://aix.web.tr/en/uretken-cekismeli-aglar-kullanarak-kedi-uretmek-ve-temel-bilesen-analizi/)
 * ## Requirements
   * Python 3
   * Keras (I use ```2.3.1```)
