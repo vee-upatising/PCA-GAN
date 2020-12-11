@@ -6,7 +6,6 @@
 Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Analysis) to Generate Cats.
 
 # How To Use This Repository
-* ## [Tutorial](https://aix.web.tr/en/uretken-cekismeli-aglar-kullanarak-kedi-uretmek-ve-temel-bilesen-analizi/)
 * ## Requirements
   * Python 3
   * Keras (I use ```2.3.1```)
@@ -17,8 +16,8 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
   * Matplotlib
   * PIL
   * [Keract](https://github.com/philipperemy/keract) (for Model Visualization)
-* ## Dataset
-  * [Download from Kaggle](https://www.kaggle.com/spandan2/cats-faces-64x64-for-generative-models)
+* ## [Tutorial](https://aix.web.tr/en/uretken-cekismeli-aglar-kullanarak-kedi-uretmek-ve-temel-bilesen-analizi/)
+* ## [Dataset](https://www.kaggle.com/spandan2/cats-faces-64x64-for-generative-models)
 * ## Documentation
   * ## [PCA GAN Training](https://nbviewer.jupyter.org/github/vee-upatising/PCA-GAN/blob/main/PCA%20GAN%20Training.ipynb)
     * This script is used to define the DCGAN class, train the Generative Adversarial Network, generate samples, and save the model at every epoch interval.
