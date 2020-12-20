@@ -21,7 +21,7 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
 * ## Documentation
   * ## [PCA GAN Training](https://nbviewer.jupyter.org/github/vee-upatising/PCA-GAN/blob/main/PCA%20GAN%20Training.ipynb)
     * This script is used to define the DCGAN class, train the Generative Adversarial Network, generate samples, and save the model at every epoch interval.
-    * The Generator and Discriminator models were designed to be trained on an 8 GB GPU. If you have a less powerful GPU then decrease the conv_filter and kernel parameters accordingly.
+    * The Generator and Discriminator models were designed to be trained on an 8 GB GPU. If you have a less powerful GPU then decrease the ```conv_filter``` and ```kernel``` parameters accordingly.
     
     * ### User Specified Parameters:
         * ```data_path```: File path pointing to folder containing dataset.
