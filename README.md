@@ -72,9 +72,11 @@ Using Deep Convolutional GANs and Unsupervised Learning (Principal Component Ana
 ![Keract](https://s8.gifyu.com/images/Keract.gif)
 
 * ## Generator Model Architecture
-  * Using (5,5) Convolutional Kernels </br>
+  * Using ```(5,5)``` Convolutional Kernels with ```64``` filters for each layer. </br>
+  * ```img_dimensions = (64,64,3)``` </br>
 ![Generator](https://i.imgur.com/toVb4MD.png)
 
 * ## Discriminator Model Architecture
-  * Using (5,5) Convolutional Kernels </br>
+  * Using ```(5,5)``` Convolutional Kernels with ```64``` filters for each layer. </br>
+  * ```img_dimensions = (64,64,3)``` </br>
 ![Discriminator](https://i.imgur.com/MkgHCUt.png)
